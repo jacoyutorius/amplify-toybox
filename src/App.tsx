@@ -4,12 +4,15 @@ import { StorageValue, useAllStorageValue } from './hooks/useAllStorageValue';
 
 function App() {
   const [comment, setComment] = useState('');
+  const [expireAt, setExpireAt] = useState(new Date())
   const { getAllStorageValue } = useAllStorageValue()
   const [storageValues, setStorageValues] = useState<StorageValue[]>([])
 
   // テキストをcacheに保存するfunction
   const setCommentCache = (comment: string) => {
-    Cache.setItem('comment', comment);
+    Cache.setItem('comment', comment, {
+      expires: Math.floor(expireAt.getTime())
+    });
     setStorageValues(getAllStorageValue())
   }
 
@@ -32,6 +35,10 @@ function App() {
       <section>
         {/* テキストを入力する */}
         <textarea value={ comment || '' } onChange={ (e) => { setComment(e.target.value) } } ></textarea>
+
+        {/* 日付を入力する */}
+        <input type="date" value={expireAt.toISOString().slice(0, 10)} onChange={(e) => { console.log(e.target.value); setExpireAt(new Date(e.target.value)) } } />
+
         {/* ボタン */}
         <button onClick={() => { setCommentCache(comment) }}>保存</button>
 
