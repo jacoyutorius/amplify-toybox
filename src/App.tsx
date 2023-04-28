@@ -37,7 +37,7 @@ function App() {
         <textarea value={ comment || '' } onChange={ (e) => { setComment(e.target.value) } } ></textarea>
 
         {/* 日付を入力する */}
-        <input type="date" value={expireAt.toISOString().slice(0, 10)} onChange={(e) => { console.log(e.target.value); setExpireAt(new Date(e.target.value)) } } />
+        <input type="date" value={expireAt.toISOString().slice(0, 10)} onChange={(e) => { setExpireAt(new Date(e.target.value)) } } />
 
         {/* ボタン */}
         <button onClick={() => { setCommentCache(comment) }}>保存</button>
