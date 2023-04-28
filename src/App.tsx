@@ -29,7 +29,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Amplify React Sandbox</h1>
+        <h1>Amplify Toybox</h1>
       </header>
 
       <section>
