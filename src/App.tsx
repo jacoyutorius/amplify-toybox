@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Cache } from 'aws-amplify';
 import { StorageValue, useAllStorageValue } from './hooks/useAllStorageValue';
 
+import { useAmplifyServiceWorker } from './hooks/useServiceWorker';
+
 function App() {
   const [comment, setComment] = useState('');
   const [expireAt, setExpireAt] = useState(new Date())
@@ -25,14 +27,25 @@ function App() {
     setComment(Cache.getItem("comment"))
     setStorageValues(getAllStorageValue())
   }, [])
-  
+
+  const { state, endpointInfo } = useAmplifyServiceWorker()
+
   return (
     <div className="App">
       <header className="App-header">
         <h1>Amplify Toybox</h1>
       </header>
 
-      <section>
+      <section id='service-worker'>
+        <h2>Service Worker</h2>
+        <p>Service Workerの状態: {state}</p>
+        <p>Service Workerのエンドポイント: </p>
+        <code>{ endpointInfo }</code>
+      </section>
+
+      <section id='cache'>
+        <h2>Cache</h2>
+
         {/* テキストを入力する */}
         <textarea value={ comment || '' } onChange={ (e) => { setComment(e.target.value) } } ></textarea>
 
