@@ -20,7 +20,7 @@ export const useAmplifyServiceWorker = () => {
       return;
     }
 
-    console.log(Notification.permission)
+    // console.log(Notification.permission)
 
     // 購読状況によって UI を変える
     if (Notification.permission === 'denied') {
