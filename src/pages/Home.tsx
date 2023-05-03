@@ -7,9 +7,7 @@ export const Home = () => (
     <p>以下の機能を試すことができます。</p>
     <ul>
       <li><Link to="service-worker">Service Worker</Link></li>
-      
-      
-      <li>Cache</li>
+      <li><Link to="cache">Cache</Link></li>
     </ul>
   </div>
 )

@@ -1,6 +1,6 @@
 import { useAmplifyServiceWorker } from '../hooks/useServiceWorker'
 
-export const ServiceWorker = () => {
+export const ServiceWorkerPage = () => {
   const { state, endpointInfo } = useAmplifyServiceWorker()
 
   return (<section id='service-worker'>
