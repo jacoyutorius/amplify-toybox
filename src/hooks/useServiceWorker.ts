@@ -50,7 +50,7 @@ export const useAmplifyServiceWorker = () => {
       }
 
       if (Notification.permission !== 'denied') {
-        await serviceWorker.enablePush('BNLu-BaOugfzE8CYW9sTmNxquwRM1Td4XhQOIvGlH6U8grkYT_TwJtr-ELHt_i08e-LSjTOb84YBv5L_o250u-A');
+        await serviceWorker.enablePush(process.env.REACT_APP_PUSH_PUBLIC_KEY as string);
       }
 
       updateState(registeredServiceWorker)
