@@ -20,7 +20,7 @@ export const useAmplifyServiceWorker = () => {
       return;
     }
 
-    // console.log(Notification.permission)
+    console.log(Notification.permission)
 
     // 購読状況によって UI を変える
     if (Notification.permission === 'denied') {
@@ -50,7 +50,7 @@ export const useAmplifyServiceWorker = () => {
       }
 
       if (Notification.permission !== 'denied') {
-        await serviceWorker.enablePush('<service worker public key>');
+        await serviceWorker.enablePush('BNLu-BaOugfzE8CYW9sTmNxquwRM1Td4XhQOIvGlH6U8grkYT_TwJtr-ELHt_i08e-LSjTOb84YBv5L_o250u-A');
       }
 
       updateState(registeredServiceWorker)
