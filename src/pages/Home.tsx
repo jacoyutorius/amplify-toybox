@@ -1,4 +1,7 @@
 import { Link } from "react-router-dom";
+// import { Analytics } from "aws-amplify";
+
+// Analytics.record({ name: 'homePageVisit' });
 
 export const Home = () => (
   <div>

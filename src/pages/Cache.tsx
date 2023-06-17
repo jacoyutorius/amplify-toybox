@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Cache } from 'aws-amplify';
 import { StorageValue, useAllStorageValue } from '../hooks/useAllStorageValue';
+// import { Analytics } from 'aws-amplify';
+
+// Analytics.record({ name: 'cachePageVisit' });
 
 export const CachePage = (): JSX.Element => {
   const [comment, setComment] = useState('');

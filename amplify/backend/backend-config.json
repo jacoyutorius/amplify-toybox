@@ -1,4 +1,6 @@
 {
+  "analytics": {},
+  "auth": {},
   "hosting": {
     "amplifyhosting": {
       "lastPushTimeStamp": "2023-05-04T03:57:11.014Z",

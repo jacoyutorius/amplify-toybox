@@ -1,4 +1,7 @@
 import { useAmplifyServiceWorker } from '../hooks/useServiceWorker'
+// import { Analytics } from 'aws-amplify';
+
+// Analytics.record({ name: 'serviceworkerPageVisit' });
 
 export const ServiceWorkerPage = () => {
   const { state, endpointInfo } = useAmplifyServiceWorker()
