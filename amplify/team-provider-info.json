@@ -17,6 +17,9 @@
           "appId": "d1sp8bus6jgu4h",
           "type": "cicd"
         }
+      },
+      "auth": {
+        "amplifytoybox": {}
       }
     }
   }

@@ -1,0 +1,21 @@
+{
+    "appName": "amplifytoybox",
+    "roleName": "pinpointLambdaRole35d2f51d",
+    "cloudformationPolicyName": "cloudformationPolicy35d2f51d",
+    "cloudWatchPolicyName": "cloudWatchPolicy35d2f51d",
+    "pinpointPolicyName": "pinpointPolicy35d2f51d",
+    "authPolicyName": "pinpoint_amplify_35d2f51d",
+    "unauthPolicyName": "pinpoint_amplify_35d2f51d",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    }
+}

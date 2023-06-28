@@ -25,6 +25,11 @@ yarn-error.log*
 webpushServer/node_modules
 sam-webpush/sam-webpush/.*
 
+/test-results/
+/playwright-report/
+/playwright/.cache/
+.reg
+
 #amplify-do-not-edit-begin
 amplify/\#current-cloud-backend
 amplify/.config/local-*
@@ -46,7 +51,3 @@ amplifytools.xcconfig
 .secret-*
 **.sample
 #amplify-do-not-edit-end
-/test-results/
-/playwright-report/
-/playwright/.cache/
-.reg
