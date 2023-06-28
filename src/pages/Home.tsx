@@ -11,6 +11,7 @@ export const Home = () => (
     <ul>
       <li><Link to="service-worker">Service Worker</Link></li>
       <li><Link to="cache">Cache</Link></li>
+      <li><Link to="analytics">Analytics</Link></li>
     </ul>
   </div>
 )
