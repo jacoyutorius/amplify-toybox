@@ -3,10 +3,6 @@
     "amplifytoybox": {
       "providerPlugin": "awscloudformation",
       "service": "Pinpoint"
-    },
-    "amplifytoyboxKinesis": {
-      "providerPlugin": "awscloudformation",
-      "service": "Kinesis"
     }
   },
   "auth": {

@@ -4,11 +4,6 @@ export type AmplifyDependentResourcesAttributes = {
       "Id": "string",
       "Region": "string",
       "appName": "string"
-    },
-    "amplifytoyboxKinesis": {
-      "kinesisStreamArn": "string",
-      "kinesisStreamId": "string",
-      "kinesisStreamShardCount": "string"
     }
   },
   "auth": {
