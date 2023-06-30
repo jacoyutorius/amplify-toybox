@@ -13,6 +13,21 @@ export const AnalyticsPage = () => {
         }
       }
     )
+
+    Analytics.record(
+      {
+        name: 'itemSelect',
+        attributes: {
+          name: 'selectedItem',
+          value: itemName
+        },
+        data: {
+          name: 'selectedItem',
+          value: itemName
+        },
+      },
+      'AWSKinesis'
+    )
   }
   
   return (<>
