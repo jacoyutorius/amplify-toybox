@@ -4,9 +4,28 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import { Amplify } from 'aws-amplify';
+import { Amplify, Analytics } from 'aws-amplify';
 import awsconfig from './aws-exports';
 Amplify.configure(awsconfig);
+
+Analytics.autoTrack('session', {
+  // REQUIRED, turn on/off the auto tracking
+  enable: true,
+  // OPTIONAL, the attributes of the event, you can either pass an object or a function 
+  // which allows you to define dynamic attributes
+  attributes: {
+      attr: 'attr'
+  },
+  // when using function
+  // attributes: () => {
+  //    const attr = somewhere();
+  //    return {
+  //        myAttr: attr
+  //    }
+  // },
+  // OPTIONAL, the service provider, by default is the Amazon Pinpoint
+  provider: 'AWSPinpoint'
+});
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
