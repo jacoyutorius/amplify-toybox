@@ -1,0 +1,12 @@
+{
+  "kinesisStreamName": "amplifytoyboxKinesis",
+  "kinesisStreamShardCount": 1,
+  "authRoleName": {
+    "Ref": "AuthRoleName"
+  },
+  "unauthRoleName": {
+    "Ref": "UnauthRoleName"
+  },
+  "authPolicyName": "kinesis_amplify_4f8c5a07",
+  "unauthPolicyName": "kinesis_amplify_4f8c5a07"
+}
