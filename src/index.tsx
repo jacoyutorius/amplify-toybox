@@ -8,23 +8,33 @@ import { Amplify, Analytics } from 'aws-amplify';
 import awsconfig from './aws-exports';
 Amplify.configure(awsconfig);
 
+// https://docs.amplify.aws/lib/analytics/autotrack/q/platform/js/#page-view-tracking
 Analytics.autoTrack('session', {
-  // REQUIRED, turn on/off the auto tracking
   enable: true,
-  // OPTIONAL, the attributes of the event, you can either pass an object or a function 
-  // which allows you to define dynamic attributes
   attributes: {
       attr: 'attr'
+  }
+});
+
+Analytics.autoTrack('pageView', {
+  enable: true,
+  eventName: 'pageView',
+  attributes: {
+    attr: 'attr'
   },
-  // when using function
-  // attributes: () => {
-  //    const attr = somewhere();
-  //    return {
-  //        myAttr: attr
-  //    }
-  // },
-  // OPTIONAL, the service provider, by default is the Amazon Pinpoint
-  provider: 'AWSPinpoint'
+  type: 'SPA',
+  getUrl: () => {
+    return window.location.origin + window.location.pathname;
+  }
+});
+
+Analytics.autoTrack('event', {
+  enable: true,
+  events: ['click'],
+  selectorPrefix: 'data-amplify-analytics-',
+  attributes: {
+    attr: 'attr'
+  }
 });
 
 const root = ReactDOM.createRoot(
