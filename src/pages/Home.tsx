@@ -12,6 +12,7 @@ export const Home = () => (
       <li><Link to="service-worker">Service Worker</Link></li>
       <li><Link to="cache">Cache</Link></li>
       <li><Link to="analytics">Analytics</Link></li>
+      <li><Link to="auth">Auth</Link></li>
     </ul>
   </div>
 )
