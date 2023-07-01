@@ -9,14 +9,24 @@
     "amplifytoybox": {
       "dependsOn": [],
       "frontendAuthConfig": {
-        "mfaTypes": [],
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
         "passwordProtectionSettings": {
-          "passwordPolicyCharacters": []
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
         },
-        "signupAttributes": [],
-        "socialProviders": [],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [
+          "FACEBOOK"
+        ],
         "usernameAttributes": [],
-        "verificationMechanisms": []
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
       },
       "providerPlugin": "awscloudformation",
       "service": "Cognito",
