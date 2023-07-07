@@ -54,13 +54,13 @@
     "useEnabledMfas": true,
     "dependsOn": [],
     "hostedUI": true,
-    "hostedUIDomainName": "amplifytoyboxa75e1e35-a75e1e35",
+    "userPoolGroupList": [],
+    "hostedUIDomainName": "amplifytoybox9a31f452-9a31f452",
     "authProvidersUserPool": [
       "Facebook"
     ],
     "hostedUIProviderMeta": "[{\"ProviderName\":\"Facebook\",\"authorize_scopes\":\"email,public_profile\",\"AttributeMapping\":{\"email\":\"email\",\"username\":\"id\"}}]",
-    "userPoolGroupList": [],
     "authProviders": [],
-    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"http://localhost:3000/\",\"https://toybox.jacoyutorius.net/\",\"https://toybox.jacoyutorius.net/\"],\"LogoutURLs\":[\"http://localhost:3000/\",\"https://toybox.jacoyutorius.net/\"]}"
+    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"http://localhost:3000/\",\"https://toybox.jacoyutorius.net/\"],\"LogoutURLs\":[\"http://localhost:3000/\",\"https://toybox.jacoyutorius.net/\"]}"
   }
 }
