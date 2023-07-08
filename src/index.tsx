@@ -4,9 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import { Amplify, Analytics } from 'aws-amplify';
-import awsconfig from './aws-exports';
-Amplify.configure(awsconfig);
+import { Analytics } from 'aws-amplify';
 
 // https://docs.amplify.aws/lib/analytics/autotrack/q/platform/js/#page-view-tracking
 Analytics.autoTrack('session', {
